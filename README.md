@@ -110,7 +110,7 @@ File berisi kolom-kolom:
 - `880230`: Pesawat tempur (Combat aircraft)
 - `880240`: Komponen pesawat tempur (Aircraft parts)
 - `9306`: Rudal dan amunisi (Missiles and ammunition)
-- Dapat ditambah/dikurangi sesuai komoditas yang ingin dianalisis
+- Dapat diubah sesuai komoditas yang ingin dianalisis
 
 ### API Key
 - Untuk menggunakan API key dengan quota lebih tinggi, daftarkan di [UN Comtrade](https://comtradedeveloper.un.org/)
