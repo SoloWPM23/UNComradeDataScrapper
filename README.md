@@ -73,7 +73,7 @@ Lihat file `requirements.txt` untuk daftar lengkap dependensi:
 
 4. Jalankan semua cell secara berurutan:
    - **Cell 1**: Import library yang diperlukan
-   - **Cell 2**: Konfigurasi direktori penyimpanan
+   - **Cell 2**: Konfigurasi API key dan direktori penyimpanan
    - **Cell 3**: Setup variabel tanggal untuk referensi
    - **Cell 4**: Ekstrak data dari UN Comtrade dengan parameter yang telah dikonfigurasi
    - **Cell 5**: Simpan data ke file Excel
