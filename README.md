@@ -112,10 +112,8 @@ File berisi kolom-kolom:
 - `9306`: Rudal dan amunisi (Missiles and ammunition)
 - Dapat ditambah/dikurangi sesuai komoditas yang ingin dianalisis
 
-### API Key (Opsional)
-- Data publik UN Comtrade dapat diakses tanpa API key
-- Untuk menggunakan API key dengan quota lebih tinggi, daftarkan di [UN Comtrade](https://comtrade.un.org/)
-- Jika tidak menggunakan API key, biarkan parameter `subscription_key` kosong
+### API Key
+- Untuk menggunakan API key dengan quota lebih tinggi, daftarkan di [UN Comtrade](https://comtradedeveloper.un.org/)
 
 ### Performa & Batasan
 - UN Comtrade API memiliki batasan permintaan per waktu
