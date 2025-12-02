@@ -116,4 +116,4 @@ Project ini dibuat untuk keperluan pembelajaran dan analisis data.
 
 ## ✍️ Author
 
-Created for data analysis and trade statistics learning purposes.
+Solo Wandika Putra Manurung @SoloWPM23-
