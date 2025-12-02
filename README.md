@@ -114,6 +114,7 @@ File berisi kolom-kolom:
 
 ### API Key
 - Untuk menggunakan API key dengan quota lebih tinggi, daftarkan di [UN Comtrade](https://comtradedeveloper.un.org/)
+- Akses file 'CARA MENDAPATKAN API KEY UN COMTRADE.pdf' pada direktori ini untuk intruksi yang lebih jelas
 
 ### Performa & Batasan
 - UN Comtrade API memiliki batasan permintaan per waktu
