@@ -1,6 +1,6 @@
 # UN Comtrade Data Extractor
 
-Aplikasi Python untuk mengekstrak data perdagangan internasional dari API UN Comtrade, khususnya data impor dan ekspor Indonesia untuk komoditas pesawat tempur dan rudal.
+Code Python untuk mengekstrak data perdagangan internasional dari API UN Comtrade, khususnya data impor dan ekspor Indonesia untuk komoditas pesawat tempur dan rudal.
 
 ## 📋 Deskripsi
 
@@ -57,17 +57,25 @@ Lihat file `requirements.txt` untuk daftar lengkap dependensi:
 ## 💻 Cara Penggunaan
 
 1. Buka file `UN_usable.ipynb` di Jupyter Notebook atau JupyterLab
-2. Pada Cell 2, sesuaikan konfigurasi:
+
+2. **Konfigurasi parameter** pada Cell 2:
    ```python
-   subscription_key = '<API KEY>'  # Ganti dengan API key Anda (jika diperlukan)
-   directory = '<SAVE DIR>'         # Ganti dengan direktori penyimpanan file
+   subscription_key = '<API KEY>'   # ganti API key sesuai milik anda
+   directory = '<SAVE DIR>'         # Contoh: 'C:/Users/YourName/Documents/comtrade_data'
    ```
 
-3. Jalankan semua cell secara berurutan:
+3. **Sesuaikan parameter ekstraksi** pada Cell 4 sesuai kebutuhan:
+   ```python
+   years = [2022, 2023, 2024, 2025]     # Ubah tahun sesuai kebutuhan
+   flows = ['M', 'X']                   # M = Impor, X = Ekspor
+   codes = ['880230', '880240', '9306'] # Kode HS produk yang ingin diunduh
+   ```
+
+4. Jalankan semua cell secara berurutan:
    - **Cell 1**: Import library yang diperlukan
-   - **Cell 2**: Konfigurasi API key dan direktori penyimpanan
-   - **Cell 3**: Setup variabel tanggal
-   - **Cell 4**: Ekstrak data dari UN Comtrade
+   - **Cell 2**: Konfigurasi direktori penyimpanan
+   - **Cell 3**: Setup variabel tanggal untuk referensi
+   - **Cell 4**: Ekstrak data dari UN Comtrade dengan parameter yang telah dikonfigurasi
    - **Cell 5**: Simpan data ke file Excel
 
 ## 📊 Output
@@ -82,18 +90,38 @@ File berisi kolom-kolom:
 
 ## 🔑 Catatan Penting
 
-### API Key
+### Konfigurasi Parameter
+
+#### Direktori Penyimpanan (`directory`)
+- Pastikan direktori yang ditentukan dapat diakses dan memiliki ruang disk yang cukup
+- Script akan membuat direktori secara otomatis jika belum ada
+- Contoh path: `C:\Users\YourName\Documents\data` atau `./output`
+
+#### Tahun (`years`)
+- Dapat diubah sesuai kebutuhan analisis
+- Semakin banyak tahun, semakin lama proses ekstraksi
+
+#### Aliran (`flows`)
+- `M`: Impor (Import)
+- `X`: Ekspor (Export)
+- Dapat hanya menggunakan salah satu atau keduanya
+
+#### Kode HS (`codes`)
+- `880230`: Pesawat tempur (Combat aircraft)
+- `880240`: Komponen pesawat tempur (Aircraft parts)
+- `9306`: Rudal dan amunisi (Missiles and ammunition)
+- Dapat ditambah/dikurangi sesuai komoditas yang ingin dianalisis
+
+### API Key (Opsional)
 - Data publik UN Comtrade dapat diakses tanpa API key
 - Untuk menggunakan API key dengan quota lebih tinggi, daftarkan di [UN Comtrade](https://comtrade.un.org/)
 - Jika tidak menggunakan API key, biarkan parameter `subscription_key` kosong
 
-### Direktori Penyimpanan
-- Pastikan direktori yang ditentukan dapat diakses dan memiliki ruang disk yang cukup
-- Script akan membuat direktori secara otomatis jika belum ada
-
-### Batasan Rate
+### Performa & Batasan
 - UN Comtrade API memiliki batasan permintaan per waktu
-- Jika mengalami error timeout, coba kurangi jumlah tahun atau kode produk
+- Total request = jumlah tahun × jumlah aliran × jumlah kode HS
+- Contoh: 4 tahun × 2 aliran × 3 kode = 24 request total
+- Jika mengalami timeout atau error, coba kurangi jumlah kombinasi parameter
 
 ## 🐛 Troubleshooting
 
@@ -106,9 +134,9 @@ File berisi kolom-kolom:
 
 ## 📚 Referensi
 
-- [UN Comtrade API Documentation](https://comtrade.un.org/api/)
-- [Klasifikasi HS](https://www.witsонline.org/)
-- [Pandas Documentation](https://pandas.pydata.org/)
+- [UN Comtrade API](https://comtradedeveloper.un.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Comtradeapicall](https://pypi.org/project/comtradeapicall/)
 
 ## 📝 Lisensi
 
