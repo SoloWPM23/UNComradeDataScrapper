@@ -56,7 +56,7 @@ Lihat file `requirements.txt` untuk daftar lengkap dependensi:
 
 ## 💻 Cara Penggunaan
 
-1. Buka file `UN_usable.ipynb` di Jupyter Notebook atau JupyterLab
+1. Buka file `UNComtradeDataScrapper.ipynb` di Jupyter Notebook atau JupyterLab
 
 2. **Konfigurasi parameter** pada Cell 2:
    ```python
